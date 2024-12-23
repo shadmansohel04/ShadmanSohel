@@ -1,8 +1,4 @@
-import leetbot from "../assets/leetbot.png"
-import tmrun from "../assets/TMRUNIMG.png"
-import rateto from "../assets/RateTo.png"
 import FeaturedProjectsCard from "./featProjCardComp"
-
 
 export default function LandingPageRestComp(){
 
@@ -13,12 +9,12 @@ export default function LandingPageRestComp(){
             name: "LeetBot"
         },
         {
-            img: tmrun,
+            img: "./TMRUNIMG.png",
             link: "https://tmrun-1.onrender.com/",
             name: "TMRUN"
         },
         {
-            img: rateto,
+            img: "./homeRate.png",
             link: "https://rateto-frontend.onrender.com/",
             name: "RateTo"
         }
