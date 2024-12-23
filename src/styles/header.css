@@ -1,0 +1,170 @@
+header{
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    padding-right: 10%;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#wrapper {
+    margin-left: 10%;
+    margin-right: 100px;
+	display:inline-block;
+	position: relative;
+    z-index: 10;
+}
+
+.main-item {
+	width:30px;
+	height:30px;
+	position:relative;
+    cursor: pointer;
+}
+
+.line {
+	position: absolute;
+	height: 3px;
+	width:100%;
+	background:white;
+	border-radius:10px;
+	transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.32s;
+}
+
+.line01 {
+	top:19%;
+}
+
+.line02 {
+	top:49%;
+}
+
+.line03 {
+	top:79%;
+}
+
+.menu.close .line01 {
+	transform:rotate(45deg);
+	top:49%;
+}
+
+.menu.close .line02, .menu.close .line03 {
+	transform:rotate(-45deg);
+	top:49%;
+}
+
+/* AFTER NAVBAR */
+
+header h1{
+    font-family: "Arizonia", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.5rem;
+}
+
+header h1 a{
+    color: inherit;
+    text-decoration: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    transition: 0.3s ease-in-out;
+}
+
+header h1 a:hover{
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.connectButton{
+    padding: 10px 0px 10px 0px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 120px;
+    transition: 0.3s ease-out;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.connectButton:hover{
+    background-color: #1CAC78;
+    cursor: pointer;
+}
+
+.openNavDesk{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 0%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    z-index: 9;
+    box-sizing: border-box;
+    transition: all ease-in-out 0.8s;
+    opacity: 0;
+}
+
+.showNavDesktop{
+    width: 100%;
+    padding-left: 10%;
+    opacity: 1;
+}
+
+.noList{
+    opacity: 0;
+    padding-top: 100px;
+    transition: all ease-in-out 2s;
+    list-style: none;
+}
+
+.noList li{
+    margin-bottom: 2%;
+}
+
+.noList a{
+    text-decoration: none;
+    font-size: 3vw;
+}
+
+.listAnimate{
+    opacity: 1;
+}
+
+@media(max-width: 768px){
+    #wrapper{
+        margin: 0;
+        order: 2;
+    }
+
+    header{
+        width: 100%;
+        padding: 25px 30px 25px 30px;
+        box-sizing: border-box;
+        height: auto;
+    }
+
+    .noList li{
+        margin-bottom: 10%;
+    }
+
+    .noList a{
+        font-size: 4rem;
+    }
+
+    header h1{
+        order: 1;
+    }
+
+    header .connectButton{
+        display: none;
+    }
+}

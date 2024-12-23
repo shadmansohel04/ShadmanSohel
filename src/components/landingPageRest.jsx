@@ -1,0 +1,56 @@
+import leetbot from "../assets/leetbot.png"
+import tmrun from "../assets/TMRUNIMG.png"
+import rateto from "../assets/RateTo.png"
+import FeaturedProjectsCard from "./featProjCardComp"
+
+
+export default function LandingPageRestComp(){
+
+    const projArray = [
+        {
+            img: "./LEETBOT.png",
+            link: "https://leetcodebot-gumy.onrender.com/",
+            name: "LeetBot"
+        },
+        {
+            img: tmrun,
+            link: "https://tmrun-1.onrender.com/",
+            name: "TMRUN"
+        },
+        {
+            img: rateto,
+            link: "https://rateto-frontend.onrender.com/",
+            name: "RateTo"
+        }
+    
+    ]
+
+    return(
+        <section id="pageSetup" className="landingPageContainer">
+            <h1>ABOUT ME</h1>
+            <div className="aboutMeContainer">
+                {/* PROBABLY PUTTING AN IMAGE HERE */}
+                <p>I’m a Computer Engineering student at TMU and a passionate full-stack developer with a 
+                    knack for building scalable, efficient, and user-centric solutions. I enjoy navigating 
+                    the challenges of both front-end and back-end development, leveraging my skills to 
+                    create impactful applications. I’m always eager to connect with fellow tech enthusiasts, 
+                    explore innovative ideas, and embrace opportunities to grow while making meaningful 
+                    contributions to the field.</p>
+            </div>
+            
+            <div className="featuredProjects">
+                <h1>FEATURED PROJECTS</h1>
+                <div className="projectsContainer">
+                    {/* WILL CREATE CUSTOM COMPONNET FOR PROJECT */}
+                    {projArray.map((each, index)=>{
+                        return(
+                            <FeaturedProjectsCard key={index} img={each.img} name={each.name} link={each.link} />
+                        )
+                    })}
+                </div>
+            </div>
+
+
+        </section>
+    )
+}

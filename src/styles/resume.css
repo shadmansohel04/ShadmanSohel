@@ -1,0 +1,137 @@
+.resumePage{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.middleLine{
+    width: 1px;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    background-color: white;
+}
+
+.resumePage h1{
+    font-size: 13rem;
+    align-self: inherit;
+    margin-bottom: 100px;
+}
+
+.resumePage h2{
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 4rem;
+    margin-bottom: 50px;
+}
+
+.jobContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.jobTile{
+    width: 400px;
+    align-items: center;
+    margin-bottom: 50px;
+    height: 6rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.jobTile:hover{
+    cursor: pointer;
+    background-color: rgba(0, 128, 0, 0.3);
+}
+
+.jobTile h1{
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    width: 90%;
+    text-align: left;
+}
+
+.jobTile h2{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 100;
+    width: 90%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.jobTile p{
+    width: 90%;
+    font-size: 1.1rem;
+    font-weight: 200;
+}
+
+
+.rightShift{
+    transform: translateX(220px);
+}
+
+.leftShift{
+    transform: translateX(-220px);
+}
+
+.topRes{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+}
+
+.topRes h1{
+    width: 70%;
+}
+
+.topRes h2{
+    width: 25%;
+    margin: 0;
+    text-align: right;
+}
+
+.openHeight{
+    height: 280px;
+}
+
+.animateJob{
+    opacity: 1;
+}
+
+@media (max-width:768px) {
+    .resumePage .bigTitle{
+        font-size: 31vw;
+        margin-bottom: 10%;
+    }
+
+    .rightShift, .leftShift{
+        transform: translateX(0);
+    }
+
+    .jobTile{
+        width: 95%;
+        z-index: 10;
+    }
+
+    .middleLine{
+        display: none;
+    }
+}   
