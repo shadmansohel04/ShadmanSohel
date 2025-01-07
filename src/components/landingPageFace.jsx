@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/landingPage.css";
+import meImg from "../assets/me.png"
 
 export default function LandingPageFace() {
     return (
@@ -29,7 +30,7 @@ export default function LandingPageFace() {
                 </h1>
             </div>
             <div className="profileContainer">
-                <img className="ProfilePic" src="/me.png" alt="shadman_Picture" />
+                <img className="ProfilePic" src={meImg} alt="shadman_Picture" />
                 <a onClick={()=>{window.open("./RESUME.pdf")}} className="connectButton">Resume</a>
             </div>
 

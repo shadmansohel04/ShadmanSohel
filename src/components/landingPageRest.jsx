@@ -1,15 +1,17 @@
 import FeaturedProjectsCard from "./featProjCardComp"
+import leetbotIMG from "../assets/LEETBOTIMG.png"
+import TMRUNIMG from "../assets/TMRUNIMG.png"
 
 export default function LandingPageRestComp(){
 
     const projArray = [
         {
-            img: "./LEETBOT.png",
+            img: leetbotIMG,
             link: "https://leetcodebot-gumy.onrender.com/",
             name: "LeetBot"
         },
         {
-            img: "./TMRUNIMG.png",
+            img: TMRUNIMG,
             link: "https://tmrun-1.onrender.com/",
             name: "TMRUN"
         },

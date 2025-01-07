@@ -23,7 +23,7 @@ export default function ProjectsContent(){
             img: "./TMRUN.png",
             link: "https://tmrun-1.onrender.com/",
             name: "TMRUN",
-            github: "hjhjvahsjhshxc",
+            github: "https://github.com/shadmansohel04/TMRUN_FRONTEND",
             tech:[
                 "ReactJS",
                 "NodeJS",
@@ -37,7 +37,7 @@ export default function ProjectsContent(){
             img: "./RATETO.png",
             link: "https://rateto-frontend.onrender.com/",
             name: "RateTo",
-            github: "tycvagvhgjabv",
+            github: "https://github.com/shadmansohel04/RateTO_Frontend",
             tech:[
                 "ReactJS",
                 "Flask",
