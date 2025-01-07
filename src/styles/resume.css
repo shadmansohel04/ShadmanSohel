@@ -40,7 +40,7 @@
     width: 400px;
     align-items: center;
     margin-bottom: 50px;
-    height: 6rem;
+    max-height: 6rem;
     background-color: rgba(255, 255, 255, 0.3);
     display: flex;
     flex-direction: column;
@@ -79,6 +79,7 @@
     width: 90%;
     font-size: 1.1rem;
     font-weight: 200;
+    margin-bottom: 20px;
 }
 
 
@@ -109,7 +110,7 @@
 }
 
 .openHeight{
-    height: 280px;
+    max-height: 400px;
 }
 
 .animateJob{
@@ -135,3 +136,22 @@
         display: none;
     }
 }   
+
+@media (max-width: 956px) and (min-width: 767px) {
+    .rightShift{
+        transform: translateX(120px);
+    }
+    
+    .leftShift{
+        transform: translateX(-120px);
+    }
+
+    .jobTile{
+        background-color: #58644c;
+    }
+
+    .jobTile:hover{
+        background-color: #203c0c;
+    }
+}
+  
