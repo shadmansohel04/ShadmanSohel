@@ -57,6 +57,17 @@ export default function ProjectsContent(){
             ],
             desc: "I created a Python script that automates daily SMS updates with location-based weather forecasts and commute times. Using Twilio, Google Maps, and OpenWeather APIs, it retrieves real-time data on traffic and weather, sending personalized updates each morning to streamline daily planning."
         },
+        {
+            img: "./ANXIETY.png",
+            name: "Anxiety Game",
+            github: "https://github.com/shadmansohel04/AnxiousGame/tree/master",
+            tech:[
+                "Java",
+                "JavaFX",
+                "Object Oriented Programming"
+            ],
+            desc: "Anxiety is a local PvP game built with Java and JavaFX, leveraging object-oriented programming principles. It challenges players with strategic decision-making, testing their ability to think critically and adapt in real-time competition."
+        }
     ]
 
     return(
