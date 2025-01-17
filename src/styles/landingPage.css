@@ -5,7 +5,8 @@
     width: 90%;
     align-self: center;
     align-items: center;
-    margin-bottom: 10vh;
+    margin-bottom: 5%;
+    margin-top: 4%;
 }
 
 .leftOfFace{
@@ -214,5 +215,10 @@
     .backgroundDim{
         background-color: transparent;
     }
+}
 
+@media (min-width: 769px) and (max-width: 1030px) {
+    .bigTitle{
+        font-size: 10rem;
+    }
 }
