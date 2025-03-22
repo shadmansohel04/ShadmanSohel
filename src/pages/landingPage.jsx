@@ -9,7 +9,6 @@ export default function LandingPage(){
     useEffect(() => {
         const hasVisited = localStorage.getItem('hasVisited');
         if (!hasVisited) {
-          alert("okok");
           sendVisitMessage();
           localStorage.setItem('hasVisited', 'true');
         }
