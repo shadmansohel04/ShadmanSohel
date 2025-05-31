@@ -37,7 +37,7 @@ export default function ProjectTileCompPage(props){
                 {props.devpost?<li> <a href={props.devpost}>D</a></li>: null}
             </ul>
             <div className={click? "onclickTile": "onclickTile openClick"}>
-                <h2>Technolagies</h2>
+                <h2>Technologies</h2>
                 <ul>
                     {props.tech.map((each, index)=>{
                         return(<li key={index}>{each}</li>)
