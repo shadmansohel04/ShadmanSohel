@@ -6,6 +6,11 @@ export default function LandingPageRestComp(){
 
     const projArray = [
         {
+            img: "./BATTLEHOME.png",
+            link: "https://hackthe6repo.onrender.com/",
+            name: "Battle Bites"
+        },
+        {
             img: leetbotIMG,
             link: "https://leetcodebot-gumy.onrender.com/",
             name: "LeetBot"

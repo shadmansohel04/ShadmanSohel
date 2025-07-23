@@ -5,6 +5,23 @@ export default function ProjectsContent(){
 
     const projects = [
         {
+            img: "./FIGHTBATTLE.png",
+            link: "https://hackthe6repo.onrender.com",
+            name: "Battle Bites",
+            github: "https://github.com/shadmansohel04/HackThe6Repo",
+            devpost: "https://devpost.com/software/battle-bites?ref_content=my-projects-tab&ref_feature=my_projects",
+            tech:[
+                "ReactJS",
+                "Socket.io",
+                "NodeJS",
+                "Google Gemini",
+                "MongoDB",
+                "Auth0",
+                "AWS S3"
+            ],
+            desc: "Battle Bites is a browserbased, Street Fighter style game where your real life meals power up your fighter! Snap a photo and let AI turn it into boosts. From nutrition to taste, every bite boosts your fighter in multiplayer battles."
+        },
+        {
             img: "./GAME.png",
             link: "https://leetcodebot-gumy.onrender.com/",
             name: "LeetBot",
