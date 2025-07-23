@@ -16,6 +16,12 @@ export default function ResumeContent(){
 
     const jobContent = [
         {
+            title: "Engineering Intern",
+            year: "2025-Current",
+            company: "Ontario Power Generation (OPG)",
+            blurb: ""
+        },
+        {
             title: "Software Developer Intern",
             year: "2024-2025",
             company: "RaiseIt",

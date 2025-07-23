@@ -21,7 +21,7 @@ export default function ProjectsContent(){
         },
         {
             img: "./TMRUN.png",
-            link: "https://tmrun-1.onrender.com/",
+            link: "https://tmrun.onrender.com/",
             name: "TMRUN",
             github: "https://github.com/shadmansohel04/TMRUN_FRONTEND",
             tech:[
