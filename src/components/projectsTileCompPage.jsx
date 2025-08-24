@@ -32,8 +32,9 @@ export default function ProjectTileCompPage(props){
             <h1>{props.name}</h1>
             <img style={{width: hover.imgWidth, height: hover.imgHeight}} src={props.img} alt="img" />
             <ul style={{height: hover.navHeight}} className="openingBottom">
-                <li><a href={props.github}><img src="https://img.icons8.com/m_rounded/512/FFFFFF/github.png" alt="gitHub" /></a></li>
+                {props.github? <li><a href={props.github}><img src="https://img.icons8.com/m_rounded/512/FFFFFF/github.png" alt="gitHub" /></a></li>: null}
                 {props.link?<li> <a href={props.link}><img src="./OPEN.png" alt="linkImg" /></a></li>: null}
+                {props.youtube?<li> <a href={props.youtube}><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/youtube-app-white-icon.png" alt="linkImg" /></a></li>: null}
                 {props.devpost?<li> <a href={props.devpost}>D</a></li>: null}
             </ul>
             <div className={click? "onclickTile": "onclickTile openClick"}>

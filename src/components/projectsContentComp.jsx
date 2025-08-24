@@ -11,7 +11,7 @@ export default function ProjectsContent(){
             github: "https://github.com/shadmansohel04/HackThe6Repo",
             devpost: "https://devpost.com/software/battle-bites?ref_content=my-projects-tab&ref_feature=my_projects",
             tech:[
-                "ReactJS",
+                "React",
                 "Socket.io",
                 "NodeJS",
                 "Google Gemini",
@@ -22,13 +22,28 @@ export default function ProjectsContent(){
             desc: "Battle Bites is a browserbased, Street Fighter style game where your real life meals power up your fighter! Snap a photo and let AI turn it into boosts. From nutrition to taste, every bite boosts your fighter in multiplayer battles."
         },
         {
+            img: "./STUDINO.png",
+            name: "StudINO",
+            github: "https://github.com/shadmansohel04/StudINO",
+            youtube: "https://www.youtube.com/watch?v=1_dqeAUIrZc&t=6s",
+            tech:[
+                "React Native",
+                "Arduino UNO",
+                "NodeMCU",
+                "Motion Detector, LCD Display, Keypad",
+                "PostgreSQL",
+                "Flask",
+            ],
+            desc: "StudINO is a hardware + software study tracker that keeps you accountable beyond your laptop. Using a mix of Arduino tools and a companion app, it monitors your study activity, scores your sessions, and nudges you back to focus when you drift off."
+        },
+        {
             img: "./GAME.png",
             link: "https://leetcodebot-gumy.onrender.com/",
             name: "LeetBot",
             github: "https://github.com/shadmansohel04/LeetcodeBot",
             devpost: "https://devpost.com/software/leetcode-robo?ref_content=my-projects-tab&ref_feature=my_projects",
             tech:[
-                "ReactJS",
+                "React",
                 "Socket.io",
                 "Flask",
                 "Mistral AI",
@@ -42,10 +57,10 @@ export default function ProjectsContent(){
             name: "TMRUN",
             github: "https://github.com/shadmansohel04/TMRUN_FRONTEND",
             tech:[
-                "ReactJS",
-                "NodeJS",
+                "React",
+                "Node",
                 "MongoDB",
-                "ExpressJS",
+                "Express",
                 "CSS"
             ],
             desc: "TMRUN is a web app offering fresh metrics for runners of all levels, focusing on factors like consistency and elevation rather than just pace and time. Built with Node.js, Express, MongoDB, and React, it's hosted on Render and integrates Strava's API for real-time scores and a global leaderboard to inspire progress and community."
@@ -56,9 +71,9 @@ export default function ProjectsContent(){
             name: "RateTo",
             github: "https://github.com/shadmansohel04/RateTO_Frontend",
             tech:[
-                "ReactJS",
+                "React",
                 "Flask",
-                "PostgreSQL",
+                "Numpy",
                 "React Leaflet",
                 "CSS"
             ],
@@ -105,11 +120,7 @@ export default function ProjectsContent(){
 
             <div className="projectsContainerPage">
                 {projects.map((each, index)=>{
-                    if(each.devpost){
-                        return(<ProjectTileCompPage desc={each.desc} tech={each.tech} key={index} img={each.img} name={each.name} github={each.github} link={each.link} devpost={each.devpost}/>)
-                    }
-                    return(<ProjectTileCompPage desc={each.desc} tech={each.tech} key={index} img={each.img} name={each.name} github={each.github} link={each.link}/>)
-
+                    return(<ProjectTileCompPage youtube={each.youtube} desc={each.desc} tech={each.tech} key={index} img={each.img} name={each.name} github={each.github} link={each.link} devpost={each.devpost}/>)
                 })}
             </div>
             
