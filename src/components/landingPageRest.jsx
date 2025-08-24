@@ -16,6 +16,11 @@ export default function LandingPageRestComp(){
             name: "LeetBot"
         },
         {
+            img: TMRUNIMG,
+            link: "https://tmrun-1.onrender.com/",
+            name: "TMRUN"
+        },
+        {
             img: "./homeRate.png",
             link: "https://rateto-frontend.onrender.com/",
             name: "RateTo"
