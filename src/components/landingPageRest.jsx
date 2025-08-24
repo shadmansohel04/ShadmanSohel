@@ -17,7 +17,7 @@ export default function LandingPageRestComp(){
         },
         {
             img: TMRUNIMG,
-            link: "https://tmrun-1.onrender.com/",
+            link: "https://tmrun.onrender.com/",
             name: "TMRUN"
         },
         {
