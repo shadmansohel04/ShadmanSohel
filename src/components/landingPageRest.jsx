@@ -1,6 +1,5 @@
 import FeaturedProjectsCard from "./featProjCardComp"
 import leetbotIMG from "../assets/LEETBOTIMG.png"
-import TMRUNIMG from "../assets/TMRUNIMG.png"
 
 export default function LandingPageRestComp(){
 
@@ -14,11 +13,6 @@ export default function LandingPageRestComp(){
             img: leetbotIMG,
             link: "https://leetcodebot-gumy.onrender.com/",
             name: "LeetBot"
-        },
-        {
-            img: TMRUNIMG,
-            link: "https://tmrun.onrender.com/",
-            name: "TMRUN"
         },
         {
             img: "./homeRate.png",
