@@ -6,7 +6,7 @@ export default function LandingPageRestComp(){
     const projArray = [
         {
             img: "./BITEME.png",
-            link: "LINK",
+            link: "",
             name: "BiteMe"
         },
         {
