@@ -6,7 +6,7 @@ export default function ProjectsContent(){
     const projects = [
         {
             img: "./BITEME.png",
-            link: "EXTEST",
+            link: "https://testflight.apple.com/join/4QxjV5pw",
             name: "BiteMe",
             tech: [
                 "React Native",
