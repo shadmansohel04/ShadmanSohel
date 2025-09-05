@@ -6,7 +6,7 @@ export default function LandingPageRestComp(){
     const projArray = [
         {
             img: "./BITEME.png",
-            link: "",
+            link: "https://testflight.apple.com/join/4QxjV5pw",
             name: "BiteMe"
         },
         {
