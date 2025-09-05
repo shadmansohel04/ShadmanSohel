@@ -5,6 +5,20 @@ export default function ProjectsContent(){
 
     const projects = [
         {
+            img: "./BITEME.png",
+            link: "EXTEST",
+            name: "BiteMe",
+            tech: [
+                "React Native",
+                "SpringBoot - REST API, WebSockets, Quartz Scheduler, JWT Auth",
+                "PostgreSQL",
+                "Docker",
+                "PyTorch Image Recognition",
+                "AWS - S3, CloudFront, ECS + EC2"
+            ],
+            desc: "BiteMe is the social app for all food lovers! Swipe through dishes to discover your next meal, share your creations on BiteMaps and BiteChats. Keep your streak alive by uploading your own recipes or showing off your take on one you found. Join as a tester and Eat, share, connect — one bite at a time."
+        },
+        {
             img: "./FIGHTBATTLE.png",
             link: "https://hackthe6repo.onrender.com",
             name: "Battle Bites",
