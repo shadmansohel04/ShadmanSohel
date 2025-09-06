@@ -7,7 +7,7 @@ export default function ProjectsContent(){
         {
             img: "./BITEME.png",
             link: "https://testflight.apple.com/join/4QxjV5pw",
-            name: "BiteMe",
+            name: "Morsum",
             tech: [
                 "React Native",
                 "SpringBoot - REST API, WebSockets, Quartz Scheduler, JWT Auth",
@@ -16,7 +16,7 @@ export default function ProjectsContent(){
                 "PyTorch Image Recognition",
                 "AWS - S3, CloudFront, ECS + EC2"
             ],
-            desc: "BiteMe is the social app for all food lovers! Swipe through dishes to discover your next meal, share your creations on BiteMaps and BiteChats. Keep your streak alive by uploading your own recipes or showing off your take on one you found. Join as a tester and Eat, share, connect — one bite at a time."
+            desc: "Morsum is the social app for all food lovers! Swipe through dishes to discover your next meal, share your creations on MoMaps and MoChats. Keep your streak alive by uploading your own recipes or showing off your take on one you found. Join as a tester and Eat, share, connect — one bite at a time."
         },
         {
             img: "./FIGHTBATTLE.png",

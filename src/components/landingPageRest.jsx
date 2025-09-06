@@ -7,7 +7,7 @@ export default function LandingPageRestComp(){
         {
             img: "./BITEME.png",
             link: "https://testflight.apple.com/join/4QxjV5pw",
-            name: "BiteMe"
+            name: "Morsum"
         },
         {
             img: "./BATTLEHOME.png",
