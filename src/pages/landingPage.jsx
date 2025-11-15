@@ -26,11 +26,9 @@ export default function LandingPage(){
                 "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    info: {
-                        email,
-                        message,
-                        subject
-                    },
+                    email,
+                    message,
+                    subject
                 }),
             });
         }
