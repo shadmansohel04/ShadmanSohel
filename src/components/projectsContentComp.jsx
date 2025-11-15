@@ -51,6 +51,19 @@ export default function ProjectsContent(){
             desc: "StudINO is a hardware + software study tracker that keeps you accountable beyond your laptop. Using a mix of Arduino tools and a companion app, it monitors your study activity, scores your sessions, and nudges you back to focus when you drift off."
         },
         {
+            img: "./LESSEATS.png",
+            name: "LessEats",
+            github: "https://github.com/shadmansohel04/LessEats",
+            tech:[
+                "Java",
+                "Google Cloud Platform",
+                "Kubernetes",
+                "KubeMQ",
+                "MySQL",
+            ],
+            desc: "Developed a microservices-based food-ordering simulator that models ordering, delivery, and restaurant management workflows, ensuring smooth, asynchronous interactions across all service components."
+        },
+        {
             img: "./GAME.png",
             link: "https://leetcodebot-gumy.onrender.com/",
             name: "LeetBot",
