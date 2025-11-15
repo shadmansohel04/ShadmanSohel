@@ -20,7 +20,7 @@ export default function LandingPage(){
         const subject = "I WONDER WHO?";
 
         try {
-            const response = await fetch("https://rateto-backend.onrender.com/contact", {
+            const response = await fetch("https://tmrun-h224.onrender.com/home/contact", {
                 method: "POST",
                 headers: {
                 "Content-Type": "application/json",
