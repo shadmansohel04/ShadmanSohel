@@ -27,12 +27,9 @@ export default function LandingPageRestComp(){
             <h1>ABOUT ME</h1>
             <div className="aboutMeContainer">
                 {/* PROBABLY PUTTING AN IMAGE HERE */}
-                <p>I’m a Computer Engineering student at TMU and a passionate full-stack developer with a 
-                    knack for building scalable, efficient, and user-centric solutions. I enjoy navigating 
-                    the challenges of both front-end and back-end development, leveraging my skills to 
-                    create impactful applications. I’m always eager to connect with fellow tech enthusiasts, 
-                    explore innovative ideas, and embrace opportunities to grow while making meaningful 
-                    contributions to the field.</p>
+                <p>I’m a Computer Engineering student at TMU and a backend developer based in Toronto starting a SDE internship at Google. 
+                    I’m always eager to connect with fellow tech enthusiasts, explore innovative ideas, and embrace opportunities to grow 
+                    while making meaningful contributions to the field.</p>
             </div>
             
             <div className="featuredProjects">
