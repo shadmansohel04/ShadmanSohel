@@ -40,7 +40,7 @@
     width: 400px;
     align-items: center;
     margin-bottom: 50px;
-    max-height: 6rem;
+    /* max-height: 10rem; */
     background-color: rgba(255, 255, 255, 0.3);
     display: flex;
     flex-direction: column;
@@ -53,7 +53,6 @@
 }
 
 .jobTile:hover{
-    cursor: pointer;
     background-color: rgba(0, 128, 0, 0.3);
 }
 
@@ -73,6 +72,31 @@
     width: 90%;
     text-align: left;
     margin-bottom: 10px;
+}
+
+.companyHeader{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.companyHeader h2{
+    width: auto;
+    margin: 0;
+    text-align: left;
+}
+
+.companyLogo{
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 6px;
+    object-fit: contain;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 .jobTile p{

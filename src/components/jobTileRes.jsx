@@ -44,7 +44,10 @@ export default function jobTileComp(props){
                 <h2>{props.year}</h2>
             </div>
 
-            <h2>{props.company}</h2>
+            <div className="companyHeader">
+                {props.logo ? <img src={props.logo} alt={`${props.company} logo`} className="companyLogo" /> : null}
+                <h2>{props.company}</h2>
+            </div>
             <p>{props.blurb}</p>
         </div>
     )
