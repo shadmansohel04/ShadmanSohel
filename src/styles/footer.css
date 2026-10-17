@@ -1,18 +1,102 @@
-.footerComp{
+.footerComp {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 250px;
+    gap: 20px;
     margin-bottom: 40px;
-    margin-top: 10px;
+    margin-top: 20px;
+    padding: 10px 0;
 }
 
-.footerComp a{
-    width: 50px;
-    height: 50px;
+.footerIconLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    position: relative;
 }
 
-.footerComp a img{
-    width: 100%;
-    height: 100%;
+.footerIcon {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.85);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effects for all icons */
+.footerIconLink:hover {
+    transform: translateY(-4px) scale(1.08);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.footerIconLink:hover .footerIcon {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* Specific brand hover styles with glowing accents */
+.footerIconLink.email:hover {
+    border-color: rgba(28, 172, 120, 0.6);
+    box-shadow: 0 6px 20px rgba(28, 172, 120, 0.35);
+}
+
+.footerIconLink.email:hover .footerIcon {
+    color: #1CAC78;
+}
+
+.footerIconLink.linkedin:hover {
+    border-color: rgba(10, 102, 194, 0.6);
+    box-shadow: 0 6px 20px rgba(10, 102, 194, 0.35);
+}
+
+.footerIconLink.linkedin:hover .footerIcon {
+    color: #0A66C2;
+}
+
+.footerIconLink.github:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+}
+
+.footerIconLink.github:hover .footerIcon {
+    color: #ffffff;
+}
+
+.footerIconLink.leetcode:hover {
+    border-color: rgba(255, 161, 22, 0.6);
+    box-shadow: 0 6px 20px rgba(255, 161, 22, 0.35);
+}
+
+.footerIconLink.leetcode:hover .footerIcon {
+    color: #FFA116;
+}
+
+/* Active click state */
+.footerIconLink:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .footerComp {
+        gap: 16px;
+        margin-bottom: 30px;
+    }
+
+    .footerIconLink {
+        width: 44px;
+        height: 44px;
+    }
+
+    .footerIcon {
+        font-size: 1.25rem;
+    }
 }

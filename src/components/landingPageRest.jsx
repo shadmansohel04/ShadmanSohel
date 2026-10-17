@@ -1,26 +1,9 @@
-import FeaturedProjectsCard from "./featProjCardComp"
-import leetbotIMG from "../assets/LEETBOTIMG.png"
+import ProjectTileCompPage from "./projectsTileCompPage"
+import { projects } from "../data/projectsData"
 
 export default function LandingPageRestComp(){
 
-    const projArray = [
-        {
-            img: "./BITEME.png",
-            link: "https://testflight.apple.com/join/arqBTEau",
-            name: "Morsum"
-        },
-        {
-            img: "./BATTLEHOME.png",
-            link: "https://hackthe6repo.onrender.com/",
-            name: "Battle Bites"
-        },
-        {
-            img: leetbotIMG,
-            link: "https://leetcodebot-gumy.onrender.com/",
-            name: "LeetBot"
-        }
-    
-    ]
+    const featuredProjects = projects.filter((p) => p.featured)
 
     return(
         <section id="pageSetup" className="landingPageContainer">
@@ -35,10 +18,9 @@ export default function LandingPageRestComp(){
             <div className="featuredProjects">
                 <h1>FEATURED PROJECTS</h1>
                 <div className="projectsContainer">
-                    {/* WILL CREATE CUSTOM COMPONNET FOR PROJECT */}
-                    {projArray.map((each, index)=>{
+                    {featuredProjects.map((each, index)=>{
                         return(
-                            <FeaturedProjectsCard key={index} img={each.img} name={each.name} link={each.link} />
+                            <ProjectTileCompPage key={index} {...each} />
                         )
                     })}
                 </div>

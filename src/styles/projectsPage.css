@@ -16,141 +16,265 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
     grid-auto-rows: minmax(450px, auto); 
-    gap: 20px;
-    width: 107%;
+    gap: 24px;
+    width: 100%;
+    max-width: 1200px;
     align-self: center;
     margin-bottom: 100px;
 }
 
-.projectPageTileComp{
+.projectPageTileComp {
     display: flex;
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.6);
-    transition: all 0.2s ease-in-out;
+    background-color: rgba(10, 15, 12, 0.8);
+    transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.35s ease, border-color 0.35s ease;
     border-radius: 20px;
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    min-height: 440px;
+    height: 100%;
     cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.projectPageTileComp:hover{
-    background-color: rgba(0, 0, 0, 0.4);
+.projectPageTileComp:hover {
+    transform: translateY(-6px);
+    border-color: rgba(34, 197, 94, 0.5);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(34, 197, 94, 0.2);
 }
 
-.projectPageTileComp img{
+/* Background Image & Zoom */
+.projectTileImg {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
-    z-index: -5;
-    transition: all 0.3s ease-in-out;
-}
-
-.projectPageTileComp h1{
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
+    object-position: center;
     z-index: 1;
-    font-size: 6rem;
+    transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-.openingBottom{
+.projectPageTileComp:hover .projectTileImg {
+    transform: scale(1.08);
+    filter: brightness(0.3) blur(2px);
+}
+
+/* Dark gradient overlay for resting state title readability */
+.cardGradientOverlay {
     position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    z-index: 10;
-    overflow: hidden;
-    list-style: none;
-    transition: linear 0.2s;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.92) 100%);
+    z-index: 2;
+    transition: opacity 0.4s ease;
 }
 
-.openingBottom li{
-    padding: 10px;
-    width: 50px;
-    height: 50px;
-    display: flex;
+.projectPageTileComp:hover .cardGradientOverlay {
+    opacity: 0.15;
 }
 
-.openingBottom li a{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 800;
-    background-color: black;
-    text-align: center;
-    border-radius: 50%;
-    transition: all 0.2s ease-in-out;
-}
-
-.openingBottom li a:hover{
-    background-color: rgb(2, 80, 2);
-}
-
-.openingBottom li a img{
-    width: 35px;
-    height: 35px;
-    z-index: 20;
-}
-
-.onclickTile{
+/* Resting State Title at Bottom */
+.projectTitleRest {
     position: absolute;
-    z-index: 4;
-    width: 100%;
-    height: 0%;
-    /* background-color: rgba(0, 0, 0, 0.9); */
-    background-color: rgba(1, 15, 1, 0.94);
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    z-index: 3;
+    transition: opacity 0.3s ease, transform 0.3s ease;
     display: flex;
     flex-direction: column;
+    gap: 4px;
+}
+
+.projectTitleRest h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.projectPageTileComp:hover .projectTitleRest {
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+}
+
+/* Action Links Bar - ALWAYS VISIBLE */
+.projectLinksBar {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 30;
+    display: flex;
     align-items: center;
-    overflow: hidden;
-    transition: 0.4s ease-in-out;
-    bottom: 0;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.openClick{
-    height: 100%;
+.projectLinkBtn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(10, 15, 12, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-.onclickTile h2{
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    margin-top: 25px;
-    width: 80%;
+.projectLinkBtn:hover {
+    background: rgba(34, 197, 94, 0.9);
+    border-color: rgba(74, 222, 128, 1);
+    color: #ffffff;
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 6px 18px rgba(34, 197, 94, 0.5);
 }
 
-.onclickTile ul{
-    width: 80%;
+.projectLinkBtn svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s ease;
 }
 
-.onclickTile p{
-    width: 80%;
-    font-weight: 200;
+.projectLinkBtn:hover svg {
+    transform: scale(1.1);
 }
 
-.onclickTile ul li{
-    font-size: 1.2rem;
-    font-weight: 200;
+/* Hover Content Overlay (Text & Tech) */
+.projectHoverOverlay {
+    position: absolute;
+    inset: 0;
+    z-index: 15;
+    background: linear-gradient(180deg, rgba(3, 15, 7, 0.88) 0%, rgba(2, 8, 4, 0.96) 100%);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 28px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+    pointer-events: none;
+    border-radius: 20px;
+    box-sizing: border-box;
 }
 
-@media (max-width:768px) {
-    .projectsPage .bigTitle{
-        font-size: 25vw;
+.projectPageTileComp:hover .projectHoverOverlay,
+.projectPageTileComp.isMobileOpen .projectHoverOverlay {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.hoverContentHeader {
+    margin-bottom: 16px;
+    padding-right: 120px; /* Leaves room so action buttons never overlap header text */
+}
+
+.hoverContentHeader h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #ffffff 0%, #a7f3d0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sectionLabel {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #4ade80;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sectionLabel::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(74, 222, 128, 0.3), transparent);
+}
+
+/* Tech Chips Tag Cloud */
+.techChipsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.techChip {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 12px;
+    background: rgba(34, 197, 94, 0.14);
+    border: 1px solid rgba(34, 197, 94, 0.35);
+    color: #e2e8f0;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.techChip:hover {
+    background: rgba(34, 197, 94, 0.3);
+    border-color: rgba(74, 222, 128, 0.7);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* Description Text */
+.hoverDescription {
+    margin-top: auto;
+}
+
+.hoverDescription p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: rgba(241, 245, 249, 0.92);
+    font-weight: 300;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .projectsPage .bigTitle {
+        font-size: 20vw;
     }
 
-    .projectsContainerPage{
-        width: 90%;
-        margin-top: 10%;
+    .projectsContainerPage {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 5%;
+        padding: 0 16px;
+        box-sizing: border-box;
     }
 
-    .projectPageTileComp h1{
-        text-align: left;
+    .projectTitleRest h1 {
+        font-size: 2rem;
     }
 
+    .hoverContentHeader h2 {
+        font-size: 1.6rem;
+    }
 }

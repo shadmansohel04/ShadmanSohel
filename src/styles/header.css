@@ -1,17 +1,16 @@
 header{
     width: 100%;
     display: flex;
-    padding: 30px;
-    padding-right: 10%;
+    padding: 30px 10%;
     height: 70px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
 }
 
 #wrapper {
-    margin-left: 10%;
-    margin-right: 100px;
-	display:inline-block;
+	display: none;
 	position: relative;
     z-index: 10;
 }
@@ -54,13 +53,14 @@ header{
 	top:49%;
 }
 
-/* AFTER NAVBAR */
+/* NAVBAR BRAND */
 
 header h1{
     font-family: "Arizonia", cursive;
     font-weight: 400;
     font-style: normal;
     font-size: 3.5rem;
+    margin: 0;
 }
 
 header h1 a{
@@ -75,7 +75,37 @@ header h1 a:hover{
     color: rgba(255, 255, 255, 0.4);
 }
 
-.connectButton{
+/* DESKTOP NAVIGATION */
+
+.desktopNav {
+    display: flex;
+    align-items: center;
+}
+
+.desktopNav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.desktopNav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease-in-out;
+}
+
+.desktopNav a:hover {
+    color: #1CAC78;
+}
+
+/* BUTTONS */
+
+.connectButton, .resumeButton{
     padding: 10px 0px 10px 0px;
     background-color: white;
     color: black;
@@ -87,18 +117,22 @@ header h1 a:hover{
     transition: 0.3s ease-out;
     display: flex;
     justify-content: center;
+    align-items: center;
     text-decoration: none;
 }
 
-.connectButton:hover{
+.connectButton:hover, .resumeButton:hover{
     background-color: #1CAC78;
+    color: black;
     cursor: pointer;
 }
+
+/* MOBILE NAV OVERLAY */
 
 .openNavDesk{
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -133,6 +167,12 @@ header h1 a:hover{
 .noList a{
     text-decoration: none;
     font-size: 3vw;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.noList a:hover{
+    color: #1CAC78;
 }
 
 .listAnimate{
@@ -140,16 +180,25 @@ header h1 a:hover{
 }
 
 @media(max-width: 768px){
-    #wrapper{
-        margin: 0;
-        order: 2;
+    .desktopNav {
+        display: none;
+    }
+
+    header .connectButton, header .resumeButton {
+        display: none;
+    }
+
+    #wrapper {
+        display: inline-block;
+        margin-left: auto;
     }
 
     header{
         width: 100%;
-        padding: 25px 30px 25px 30px;
+        padding: 25px 30px;
         box-sizing: border-box;
         height: auto;
+        justify-content: flex-end;
     }
 
     .noList li{
@@ -158,13 +207,5 @@ header h1 a:hover{
 
     .noList a{
         font-size: 4rem;
-    }
-
-    header h1{
-        order: 1;
-    }
-
-    header .connectButton{
-        display: none;
     }
 }
