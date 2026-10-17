@@ -30,6 +30,7 @@ export const projects = [
             "Auth0",
             "AWS S3"
         ],
+        youtube: "https://www.youtube.com/watch?v=XgdWECnHHYo",
         desc: "Battle Bites is a browserbased, Street Fighter style game where your real life meals power up your fighter! Snap a photo and let AI turn it into boosts. From nutrition to taste, every bite boosts your fighter in multiplayer battles."
     },
     {
