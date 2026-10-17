@@ -31,7 +31,6 @@ export default function LandingPageFace() {
             </div>
             <div className="profileContainer">
                 <img className="ProfilePic" src={meImg} alt="shadman_Picture" />
-                <a onClick={()=>{window.open("./RESUME.pdf")}} className="connectButton">Resume</a>
             </div>
 
 
