@@ -118,7 +118,7 @@ export const projects = [
     {
         img: "./ANXIETY.png",
         name: "Anxiety Game",
-        github: "https://github.com/shadmansohel04/AnxiousGame/tree/master",
+        github: "https://github.com/shadmansohel04/AnxietyGame",
         tech: [
             "Java",
             "JavaFX",
