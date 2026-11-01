@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { FiArrowUpRight, FiFileText } from "react-icons/fi";
+import { FiArrowUpRight, FiFileText, FiMenu, FiX } from "react-icons/fi";
 import "../styles/header.css";
 
 export default function HeaderComp() {
@@ -24,6 +24,17 @@ export default function HeaderComp() {
     useEffect(() => {
         setIsMenuOpen(false);
     }, [location.pathname]);
+
+    // Close mobile menu on Escape key press
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === "Escape" && isMenuOpen) {
+                setIsMenuOpen(false);
+            }
+        };
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [isMenuOpen]);
 
     // Prevent body scroll when mobile menu is open
     useEffect(() => {
@@ -95,17 +106,28 @@ export default function HeaderComp() {
                     <button 
                         className={`hamburgerBtn ${isMenuOpen ? "open" : ""}`}
                         onClick={toggleMenu}
-                        aria-label="Toggle Navigation Menu"
+                        aria-label="Open Navigation Menu"
                     >
-                        <span className="hamburgerLine line1"></span>
-                        <span className="hamburgerLine line2"></span>
-                        <span className="hamburgerLine line3"></span>
+                        <FiMenu size={24} />
                     </button>
                 </div>
             </header>
 
             {/* Mobile Navigation Overlay */}
-            <div className={`mobileNavOverlay ${isMenuOpen ? "isOpen" : ""}`}>
+            <div 
+                className={`mobileNavOverlay ${isMenuOpen ? "isOpen" : ""}`}
+                onClick={(e) => {
+                    if (e.target === e.currentTarget) closeMenu();
+                }}
+            >
+                <button 
+                    className="mobileNavCloseBtn" 
+                    onClick={closeMenu}
+                    aria-label="Close Navigation Menu"
+                >
+                    <FiX size={26} />
+                </button>
+
                 <div className="mobileNavContent">
                     <ul className="mobileNavList">
                         <li style={{ transitionDelay: "0.05s" }}>
@@ -144,4 +166,3 @@ export default function HeaderComp() {
         </div>
     );
 }
-
