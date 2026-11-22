@@ -112,6 +112,10 @@
     max-width: 1200px;
 }
 
+.featuredProjects .projectTileImg {
+    object-position: 18% center;
+}
+
 @media(max-width:768px){
     .landingPageFace{
         flex-direction: column;
