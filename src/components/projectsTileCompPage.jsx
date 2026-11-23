@@ -6,7 +6,9 @@ export default function ProjectTileCompPage(props) {
     const [isMobileOpen, setIsMobileOpen] = useState(false)
 
     const toggleMobile = () => {
-        setIsMobileOpen((prev) => !prev)
+        if (typeof window !== "undefined" && window.innerWidth <= 768) {
+            setIsMobileOpen((prev) => !prev)
+        }
     }
 
     return (
@@ -104,6 +106,7 @@ export default function ProjectTileCompPage(props) {
                 <div>
                     <div className="hoverContentHeader">
                         <h2>{name}</h2>
+                        <span className="mobileToggleHint">Tap to close</span>
                     </div>
 
                     <div className="sectionLabel">Technologies</div>
